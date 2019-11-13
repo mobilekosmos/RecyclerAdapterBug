@@ -64,15 +64,11 @@ internal class RecyclerAdapterKt : RecyclerView.Adapter<BaseViewHolder>() {
 }
 
 sealed class BaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    class BasicItemViewHolder(
-        val binding: ItemViewBinding
-    ) : BaseViewHolder(binding.root) {
-
+    class BasicItemViewHolder(private val binding: ItemViewBinding) : BaseViewHolder(binding.root) {
         fun bind(item : Item) {
-            binding.tvTitle.text = item.title
-            binding.tvMessage.text = item.message
-
-            // Do I really always need this?
+//            binding.tvTitle.text = item.title
+//            binding.tvMessage.text = item.message
+            binding.item = item
             binding.executePendingBindings()
         }
     }

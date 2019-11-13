@@ -71,6 +71,9 @@ sealed class BaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) 
         fun bind(item : Item) {
             binding.tvTitle.text = item.title
             binding.tvMessage.text = item.message
+
+            // Do I really always need this?
+            binding.executePendingBindings()
         }
     }
 }

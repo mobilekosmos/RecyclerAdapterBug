@@ -6,3 +6,5 @@ Written in Kotlin, with compileSdkVersion, minSdkVersion and targetSdkVersion = 
 Android Studio 3.5.2
 
 buildToolsVersion "29.0.2"
+
+The issue was already reported to Google a long time ago: https://issuetracker.google.com/issues/75986393

@@ -52,7 +52,7 @@ final class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.BaseVie
         }
     }
 
-    public Object getItem(int position) {
+    private Object getItem(int position) {
         if (getItemCount() > position) {
             return data.get(position);
         } else {
@@ -67,8 +67,8 @@ final class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.BaseVie
 
         BaseViewHolder(View itemView) {
             super(itemView);
-            titleTextView = (TextView) itemView.findViewById(R.id.tv_title);
-            messageTextView = (TextView) itemView.findViewById(R.id.tv_message);
+            titleTextView = itemView.findViewById(R.id.tv_title);
+            messageTextView = itemView.findViewById(R.id.tv_message);
         }
     }
 }
